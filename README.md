@@ -3,15 +3,6 @@ A docker image (Dockerfile) that includes gcc-musl cross-compilers for various a
 This is used to build the binaries for a simple static benchmark suite. The intention is to use these as a canonical set of compilers,
 to never update.
 
-It's based on musl-cross-make 0.9.8, and includes the following dependencies:
-- gcc-6.4.0
-- musl-1.1.22
-- binutils-2.27
-- gmp-6.1.1
-- linux-4.4.10 kernel headers
-- mpc-1.0.3
-- mpfr-3.1.4
-
 The image includes cross compilers for the following architectures/cpu-configurations (some of which are implemented with simple shell scripts
 acting as a driver for other compilers, enabling certain compilation flags).
 
@@ -25,6 +16,15 @@ acting as a driver for other compilers, enabling certain compilation flags).
 - armv6 (vfpv2, arm mode)
 - armv7 (neon+vfpv3, thumb mode)
 - aarch64
+
+It's based on musl-cross-make 0.9.8, and includes the following dependencies:
+- gcc-6.4.0
+- musl-1.1.22
+- binutils-2.27
+- gmp-6.1.1
+- linux-4.4.10 kernel headers
+- mpc-1.0.3
+- mpfr-3.1.4
 
 The cross compilers are in the image at `/musl-cross/bin/<arch>-<compiler>`, where compiler is one of `gcc`, `g++`, `cpp`.
 
