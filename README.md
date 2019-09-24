@@ -12,9 +12,9 @@ acting as a driver for other compilers, enabling certain compilation flags).
 - i686 (x87+mmx+sse)
 - i786 (x87+mmx+sse+sse2)
 - x86_64 (x87+mmx+sse+sse2)
-- armv6 (no fpu, arm mode)
-- armv6 (vfpv2, arm mode)
-- armv7 (neon+vfpv3, thumb mode)
+- armv6sf (no fpu, arm mode)
+- armv6hf (vfpv2, arm mode)
+- armv7hf (neon+vfpv3, thumb mode)
 - aarch64
 
 It's based on musl-cross-make 0.9.8, and includes the following dependencies:
